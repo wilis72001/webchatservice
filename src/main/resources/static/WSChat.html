@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>my webChat</title>
+  <script src="https://cdn.jsdelivr.net/npm/sockjs-client@1.5.1/dist/sockjs.min.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+  <script>
+    let stompClient = null;
+    let nickname = null;
+    function connect() {
+      const socket = new SockJS('/websocket');
+      stompClient = Stomp.over(socket);
+      stompClient.connect({}, function (frame) {
+        console.log('Connected: ' + frame);
+        stompClient.subscribe('/topic/messages', function (message) {
+          showMessage(JSON.parse(message.body));
+        });
+      });
+    }
+    function disconnect() {
+      if (stompClient !== null) {
+        stompClient.disconnect();
+      }
+      console.log("Disconnected");
+    }
+    function sendMessage() {
+      const messageInput = document.getElementById('message');
+      const message = messageInput.value;
+
+      if (nickname === null) {
+        const nicknameInput = document.getElementById('nickname');
+        nickname = nicknameInput.value;
+        messageInput.disabled = false;
+      }
+      const chatMessage = {
+        nickname: nickname,
+        message: message
+      };
+      stompClient.send("/app/chat", {}, JSON.stringify(chatMessage));
+      messageInput.value = '';
+    }
+    function showMessage(chatMessage) {
+      const chatDiv = document.getElementById('chat');
+      const p = document.createElement('p');
+      p.appendChild(document.createTextNode(chatMessage.nickname + ': ' + chatMessage.message));
+      chatDiv.appendChild(p);
+    }
+  </script>
+</head>
+<body>
+<h2>WebSocket Chat</h2>
+<div id="chat"></div>
+<input type="text" id="nickname" placeholder="Nickname">
+<input type="text" id="message" placeholder="Type a message..." disabled>
+<button onclick="sendMessage()">Send</button>
+
+<script>
+  connect();
+</script>
+</body>
+</html>
