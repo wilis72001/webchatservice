@@ -1,7 +1,7 @@
 new Vue({
     el: '#app1',
     data: {
-        accountName : '',
+        accountName : '未生成',
 
     },
     methods: {
@@ -16,12 +16,16 @@ new Vue({
                 .then(data => {
                     console.log(data);
                     this.accountName = data;
+                    sessionStorage.setItem('accountName', data);
+
+                    window.location.href = '/WSChat.html';
+
+
                 })
                 .catch(error => {
                     console.error('Error:', error);
                 });
+
         },
-            }
-
-
+  }
 })

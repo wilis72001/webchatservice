@@ -2,6 +2,8 @@
 <html>
 <head>
   <title>my webChat</title>
+  <meta charset="UTF-8">
+
   <script src="https://cdn.jsdelivr.net/npm/sockjs-client@1.5.1/dist/sockjs.min.js"></script>
   <script src="https://cdn.bootcdn.net/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
   <script>
@@ -46,16 +48,29 @@
       chatDiv.appendChild(p);
     }
   </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // 读取 sessionStorage 中的 accountName 值并显示
+      document.getElementById('accountName').textContent = sessionStorage.getItem('accountName');
+    });
+
+  </script>
 </head>
 <body>
-<h2>WebSocket Chat</h2>
-<div id="chat"></div>
-<input type="text" id="nickname" placeholder="Nickname">
-<input type="text" id="message" placeholder="Type a message..." disabled>
-<button onclick="sendMessage()">Send</button>
+<div id = "app1">
+  <h4 id="accountName"></h4>
+  <h2>欢迎来到webchat页面！</h2>
 
+      <div id="chat"></div>
+      <input type="text" id="nickname" placeholder="Nickname">
+      <input type="text" id="message" placeholder="Type a message..." disabled>
+      <button onclick="sendMessage()">Send</button>
+  </div>
 <script>
   connect();
 </script>
+<script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+<script src="js/vue.js" ></script>
 </body>
+
 </html>
