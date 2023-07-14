@@ -11,11 +11,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @ComponentScan(basePackages = {"register"})
 @ComponentScan(basePackages = {"WebSocket"})
-public class HelloWorldApplication {
-
+@ComponentScan(basePackages = {"Controller"})
+public class WebChatApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(HelloWorldApplication.class, args);
+        SpringApplication.run(WebChatApplication.class, args);
     }
 }
 

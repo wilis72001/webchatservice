@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>注册登录页面</title>
+  <style>
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .form-group {
+      margin-bottom: 10px;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    .form-group input {
+      width: 100%;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+    .form-group input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+    }
+    .custom-button {
+      background-color: #4CAF50; /* 自定义背景颜色，这里使用红色 (#ff0000) */
+      width: 400px; /* 自定义长度，这里设置为200像素 */
+      border-width: 0px;/*边框粗细*/
+      font-family: Arial, sans-serif; /* 自定义字体，这里设置为Arial或sans-serif字体 */
+      font-size: 16px; /* 自定义字体大小，这里设置为16像素 */
+      color: #ffffff; /* 自定义字体颜色，这里使用白色 (#ffffff) */
+      /* 添加其他样式属性，如边框、圆角等，根据需要进行自定义 */
+    }
+  </style>
+</head>
+<body>
+<div class="container" id = "app1">
+  <h2>注册登录页面</h2>
+  <h3>欢迎来到webchat！</h3>
+  <form action="register" method="POST">
+    <div class="form-group">
+      <label for="username">用户名:</label>
+      <input type="text" id="username" name="username" >
+    </div>
+    <div class="form-group">
+      <input type="submit" value="登录">
+    </div>
+  </form>
+  <form >
+  <div >
+    <button class="custom-button" @click="oneKeyRegister">一键注册登录</button><br><br>
+
+  </div>
+  </form>
+</div>
+<script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+<script src="js/vue.js" ></script>
+</body>
+</html>

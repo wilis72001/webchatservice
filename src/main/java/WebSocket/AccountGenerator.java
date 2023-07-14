@@ -5,7 +5,7 @@ import java.util.Random;
 public class AccountGenerator {
     private static final String CHARACTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
-    static String getString() {
+    public static String getString() {
         StringBuilder sb = new StringBuilder(20);
         Random random = new Random();
         for (int i = 0; i < 20; i++) {
