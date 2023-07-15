@@ -10,15 +10,13 @@ import java.util.Map;
 
 @Controller
 public class UserController {
+    private final JdbcTemplate jdbcTemplate;
     @Autowired
-    private JdbcTemplate jdbcTemplate;
-
+    public UserController(JdbcTemplate jdbcTemplate) {
+        this.jdbcTemplate = jdbcTemplate;
+    }
     @RequestMapping(value = "/getUsers",method = RequestMethod.GET)
     @ResponseBody
-    /*
-     * List 里的对象是Map对象，而Map对象是
-     * 由一个String类型的键和Object类型的值组成
-     * */
     //查询用户
     public List<Map<String,Object>> getUsers(){
         String sql="select * from user";//SQL查询语句
@@ -53,3 +51,4 @@ public class UserController {
     }
 
 }
+
