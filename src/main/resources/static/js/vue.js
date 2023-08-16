@@ -17,10 +17,7 @@ new Vue({
                     console.log(data);
                     this.accountName = data;
                     sessionStorage.setItem('accountName', data);
-
                     window.location.href = '/WSChat.html';
-
-
                 })
                 .catch(error => {
                     console.error('Error:', error);

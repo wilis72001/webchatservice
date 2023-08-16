@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>my接口测试</title>
+
+
+  <link rel="stylesheet" href="https://www.jq22.com/jquery/bootstrap-3.3.4.css">
+  <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> <!-- 添加axios库 -->
+
+
+</head>
+<body>
+  <div id = "app3" class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>接口名称</th>
+                  <th>输入</th>
+                  <th>启动</th>
+                  <th style="width: 200px;">返回</th>
+                  <th>操作</th>
+                </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>001</td>
+                <td>注册</td>
+                <td>
+                  <input id="username" v-model="userName" size="15" style="height: 35px" placeholder="用户名">
+                </td>
+                <td>
+                  <button class="button" @click="registerUser">发起注册</button><br><br>
+                </td>
+
+                <td >
+                  <br>
+                </td>
+                <td>
+                </td>
+              </tr>
+              <tr>
+                <td>002</td>
+                <td>批量注册</td>
+                <td>
+                  从：<input id="username_from" v-model = "username_from"  size ="15" style="height: 35px " placeholder ="用户名">&nbsp&nbsp
+
+                  到：<input id="username_to" v-model  = "username_to"  size ="15" style="height: 35px " placeholder ="用户名"><br><br>
+                  用户名尾部：<input id="username_end" v-model  = "username_end"  size ="15" style="height: 35px " placeholder ="用户名"><br><br>
+                  并发线程数：<input id="numThreads" v-model  = "numThreads"  size ="15" style="height: 35px " placeholder ="用户名"><br><br>
+
+                </td>
+                <td>
+                  <button class="button" @click="batRegisterUser">启动</button>
+
+                </td>
+                <td>
+                  接口响应时间：{{ apiResponseTime }}毫秒
+
+                </td>
+                <td>
+
+
+
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script> <!-- 注意：修改为正确的Vue版本 -->
+  <script src="myVue.js" ></script>
+</body>
+</html>

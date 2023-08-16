@@ -1,24 +1,11 @@
 package WebSocket;
 
 public class ChatMessage {
-    private String nickname;
-    private String message;
-    public String getNickname() {
-        return nickname;
-    }
+    private String content;
+    private String sender;
 
-    public void setNickname(String nickname) {
-        this.nickname = nickname;
-    }
+    // 构造函数、getter 和 setter 方法
 
-    public String getMessage() {
-        return message;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
-    }
-
-
-
+    // 可以根据需要添加其他字段
 }
+
