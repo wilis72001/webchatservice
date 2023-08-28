@@ -31,7 +31,7 @@ import java.util.*;
 
 @Controller
 public class webchatRegisterController {
-    final String serverNumber = "51238";
+    final String serverNumber = "56594";
     // 将字节数组转换为十六进制字符串
     private String bytesToHexString(byte[] bytes) {
         StringBuilder sb = new StringBuilder();
@@ -217,7 +217,76 @@ public class webchatRegisterController {
     }
 
 
+    //获取我的好友
+    @CrossOrigin(origins = "http://localhost:"+serverNumber)
+    @RequestMapping(value="/getMyFriend",method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String, Object> getMyFriend(String myAccount) throws IOException {
+        System.out.println("myAccount的值是"+myAccount);
+        Map<String, Object> data = new HashMap<>();
+        try {
+            String sql = "SELECT * FROM my_friend WHERE my_account = ?";
+            data = jdbcTemplate.queryForMap(sql, myAccount);
+            // 可能会抛出异常的代码
+        } catch (Exception e) {
+            // 处理 ExceptionType1 类型的异常
+            System.out.println(e);
+        }
+        // 遍历并打印Map中的键值对
+        for (Map.Entry<String, Object> entry : data.entrySet()) {
+            String key = entry.getKey();
+            Object value = entry.getValue();
+            System.out.println(key + ": " + value);
+        }
+        return data;
+    }
 
+    //查询用户
+    @CrossOrigin(origins = "http://localhost:"+serverNumber)
+    @RequestMapping(value="/searchUser",method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String, Object> searchUser(String myAccount) throws IOException {
+        System.out.println("myAccount的值是"+myAccount);
+        //   System.out.println("account的值是" + address);
+        Map<String, Object> data = new HashMap<>();
+
+        try {
+            String sql = "SELECT * from blc_user WHERE account_add = ?";
+            data = jdbcTemplate.queryForMap(sql, myAccount);
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        data.forEach((key, value) -> {
+            //System.out.println(key + ": " + value);
+        });
+        System.out.println("-----------------------");
+
+        return data;
+    }
+
+    //查询是否设置密码
+    @CrossOrigin(origins = "http://localhost:"+serverNumber)
+    @RequestMapping(value="/checkIfSetPw",method = RequestMethod.POST)
+    @ResponseBody
+    public String checkIfSetPw(String my_account) throws IOException {
+        System.out.println("myAccount的值是"+my_account);
+        //   System.out.println("account的值是" + address);
+        Map<String, Object> data = new HashMap<>();
+
+        try {
+            String sql = "SELECT * from blc_user WHERE account_add = ?";
+            data = jdbcTemplate.queryForMap(sql, my_account);
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        Object  passwordValue = data.get("password");
+        String password = (String) passwordValue;
+        if(password=="default"){
+            return "密码未设置，请先设置";
+        }else {
+            return "成功";
+        }
+    }
 
 
 
