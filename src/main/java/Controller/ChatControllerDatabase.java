@@ -18,28 +18,33 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+import java.time.Instant;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.util.*;
 import java.util.concurrent.CompletableFuture;
 
 //notice
 @RestController
-@RequestMapping("/api")
 @CrossOrigin
 public class ChatControllerDatabase {
-    final String serverNumber = "56594";
+    final String serverNumber = "58637";
     private JdbcTemplate jdbcTemplate;
+    public ChatControllerDatabase(JdbcTemplate jdbcTemplate) {
+        this.jdbcTemplate = jdbcTemplate;
+    }
 
 
+    //发送消息
     @CrossOrigin(origins = "http://localhost:" + serverNumber)
-    @PostMapping("/sendMessageToDatabase")
-    public String sendMessageToDatabase(@RequestBody Map<String, String> requestBody) {
-        String sender_account =  requestBody.get("sender_account");
-        String receiver_account =   requestBody.get("receiver_account");
-        String message =    requestBody.get("message");
-        String sent_time =   requestBody.get("sent_time");
-        System.out.println(sender_account+"---"+receiver_account+"---"+message+"---"+sent_time);
+    @PostMapping("/send_message")
+    public String send_message(@RequestBody Map<String, String> requestBody) {
+
+        String sender_account =  requestBody.get("sender");
+        String receiver_account =   requestBody.get("receiver");
+        String message =    requestBody.get("content");
+        String sent_time =    requestBody.get("sent_time");
+    //    System.out.println(sender_account+"---"+receiver_account+"---"+message+"---"+sent_time);
 
         try {
             String sql = "INSERT INTO chat_records (sender_account, receiver_account,message,sent_time) VALUES (?,?,?,?)";
@@ -51,6 +56,56 @@ public class ChatControllerDatabase {
         }
         return "发送成功";
     }
+
+    //获取历史记录
+    @CrossOrigin(origins = "http://localhost:" + serverNumber)
+    @PostMapping("/getMessageISent")
+    public List<Map<String, Object>> getMessageISent(@RequestBody Map<String, String> requestBody) {
+        String sender_account = requestBody.get("sender");
+        String receiver_account = requestBody.get("receiver");
+      //  System.out.println(sender_account + "---" + receiver_account);
+        try {
+            String sql = "SELECT sender_account,receiver_account,message,sent_time FROM chat_records WHERE sender_account = ? AND receiver_account = ?";
+            List<Map<String, Object>> chatHistory = jdbcTemplate.queryForList(sql, sender_account, receiver_account);
+            chatHistory.forEach(data -> {
+                data.forEach((key, value) -> {
+               //     System.out.println(key + ": " + value);
+                });
+            });
+            return chatHistory;
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+
+        return Collections.emptyList(); // Return an empty list in case of error
+    }
+
+    //获取发送给我的消息
+    @CrossOrigin(origins = "http://localhost:" + serverNumber)
+    @PostMapping("/getMessageSentToMe")
+    public List<Map<String, Object>> getMessageSentToMe(@RequestBody Map<String, String> requestBody) {
+        String sender_account = requestBody.get("sender");
+        String receiver_account = requestBody.get("receiver");
+    //    System.out.println(sender_account + "---" + receiver_account);
+        try {
+            String sql = "SELECT sender_account,receiver_account,message,sent_time FROM chat_records WHERE sender_account = ? AND receiver_account = ?";
+            List<Map<String, Object>> messageSentToMe = jdbcTemplate.queryForList(sql, sender_account,receiver_account);
+            messageSentToMe.forEach(data -> {
+                data.forEach((key, value) -> {
+               //     System.out.println(key + ": " + value);
+                });
+            });
+            return messageSentToMe;
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+
+        return Collections.emptyList(); // Return an empty list in case of error
+    }
+
+
+
+
 
     @Configuration
     public class CorsConfig implements WebMvcConfigurer {

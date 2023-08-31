@@ -31,7 +31,7 @@ import java.util.*;
 
 @Controller
 public class webchatRegisterController {
-    final String serverNumber = "56594";
+    final String serverNumber = "58637";
     // 将字节数组转换为十六进制字符串
     private String bytesToHexString(byte[] bytes) {
         StringBuilder sb = new StringBuilder();
@@ -197,48 +197,90 @@ public class webchatRegisterController {
 
     //添加好友
     @CrossOrigin(origins = "http://localhost:"+serverNumber)
-    @RequestMapping(value="/addFriend",method = RequestMethod.POST)
+    @RequestMapping(value="/addFriend", method = RequestMethod.POST)
     @ResponseBody
-    public String addFriend(String myAccount ,String friendAccount) throws IOException {
-        long timestamp = System.currentTimeMillis();
-        Instant instant = Instant.ofEpochMilli(timestamp);
-        LocalDateTime dateTime = instant.atZone(ZoneId.systemDefault()).toLocalDateTime();
-        System.out.println("account的值是"+myAccount+"..friendAccount的值为："+friendAccount+"。。。当前时间："+dateTime);
-
+    public String addFriend(String myAccount, String friendAccount) {
         try {
-            String sql = "INSERT INTO my_friend (my_account, friend_account,add_time) VALUES (?,?,?)";
-            jdbcTemplate.update(sql,myAccount, friendAccount,dateTime);
-            // 可能会抛出异常的代码
+            long timestamp = System.currentTimeMillis();
+            Instant instant = Instant.ofEpochMilli(timestamp);
+            LocalDateTime dateTime = instant.atZone(ZoneId.systemDefault()).toLocalDateTime();
+            System.out.println("在addFriend account的值是" + myAccount + "..friendAccount的值为：" + friendAccount + "。。。当前时间：" + dateTime);
+
+            // Check if the friendship already exists
+            String querySql = "SELECT COUNT(*) FROM my_friend WHERE my_account = ? AND friend_account = ? ";
+            int count = jdbcTemplate.queryForObject(querySql, Integer.class, myAccount, friendAccount);
+
+            if (count > 0) {
+                return "用户已添加";
+            }
+
+            String insertSql = "INSERT INTO my_friend (my_account, friend_account, add_time) VALUES (?, ?, ?)";
+            jdbcTemplate.update(insertSql, myAccount, friendAccount, dateTime);
+
+            return "添加好友成功";
         } catch (Exception e) {
-            // 处理 ExceptionType1 类型的异常
             System.out.println(e);
+            return "添加好友失败";
         }
-        return "添加好友成功";
     }
+
+    //添加好友
+    @CrossOrigin(origins = "http://localhost:"+serverNumber)
+    @RequestMapping(value="/delFriend", method = RequestMethod.POST)
+    @ResponseBody
+    public String delFriend(String myAccount, String friendAccount) {
+        try {
+            System.out.println("删除好友：myAccount=" + myAccount + ", friendAccount=" + friendAccount);
+
+            // Delete the friendship
+            String sql = "DELETE FROM my_friend WHERE (my_account = ? AND friend_account = ?) OR (my_account = ? AND friend_account = ?)";
+            int rowsAffected = jdbcTemplate.update(sql, myAccount, friendAccount, friendAccount, myAccount);
+
+            if (rowsAffected > 0) {
+                return "删除好友成功";
+            } else {
+                return "好友关系不存在";
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+            return "删除好友失败";
+        }
+    }
+
+
 
 
     //获取我的好友
     @CrossOrigin(origins = "http://localhost:"+serverNumber)
     @RequestMapping(value="/getMyFriend",method = RequestMethod.POST)
     @ResponseBody
-    public Map<String, Object> getMyFriend(String myAccount) throws IOException {
-        System.out.println("myAccount的值是"+myAccount);
-        Map<String, Object> data = new HashMap<>();
+    public List<Map<String, Object>> getMyFriend(String my_account) throws IOException {
+        System.out.println("在getMyFriend my_account的值是"+my_account);
+        List<Map<String, Object>> dataList = new ArrayList<>();
+        List<String> friendAccounts = new ArrayList<>();
         try {
             String sql = "SELECT * FROM my_friend WHERE my_account = ?";
-            data = jdbcTemplate.queryForMap(sql, myAccount);
-            // 可能会抛出异常的代码
+            dataList = jdbcTemplate.queryForList(sql, my_account);
+            List<Map<String, Object>> friendDetailsList = new ArrayList<>(); // 存储好友详细信息
+            for (Map<String, Object> data : dataList) {
+                String friendAccount = (String) data.get("friend_account");
+                friendAccounts.add(friendAccount);
+             //   System.out.println("我的好友地址" + friendAccounts);
+                try {
+                    String sql2 = "SELECT * from blc_user WHERE account_add = ?";
+                    Map<String, Object> friendDetails = jdbcTemplate.queryForMap(sql2, friendAccount);
+                    if (friendDetails != null) {
+                        friendDetailsList.add(friendDetails);
+                    }
+                } catch (Exception e) {
+                    System.out.println(e);
+                }
+            }
+            return friendDetailsList;
         } catch (Exception e) {
-            // 处理 ExceptionType1 类型的异常
             System.out.println(e);
         }
-        // 遍历并打印Map中的键值对
-        for (Map.Entry<String, Object> entry : data.entrySet()) {
-            String key = entry.getKey();
-            Object value = entry.getValue();
-            System.out.println(key + ": " + value);
-        }
-        return data;
+        return dataList;
     }
 
     //查询用户
@@ -246,7 +288,7 @@ public class webchatRegisterController {
     @RequestMapping(value="/searchUser",method = RequestMethod.POST)
     @ResponseBody
     public Map<String, Object> searchUser(String myAccount) throws IOException {
-        System.out.println("myAccount的值是"+myAccount);
+        System.out.println("在searchUser myAccount的值是"+myAccount);
         //   System.out.println("account的值是" + address);
         Map<String, Object> data = new HashMap<>();
 
@@ -269,7 +311,7 @@ public class webchatRegisterController {
     @RequestMapping(value="/checkIfSetPw",method = RequestMethod.POST)
     @ResponseBody
     public String checkIfSetPw(String my_account) throws IOException {
-        System.out.println("myAccount的值是"+my_account);
+        System.out.println("在checkIfSetPw myAccount的值是"+my_account);
         //   System.out.println("account的值是" + address);
         Map<String, Object> data = new HashMap<>();
 
@@ -281,12 +323,18 @@ public class webchatRegisterController {
         }
         Object  passwordValue = data.get("password");
         String password = (String) passwordValue;
-        if(password=="default"){
-            return "密码未设置，请先设置";
+        System.out.println("password的值是"+password);
+
+        if("default".equals(password)){
+            return "请先设置账号的密码";
         }else {
             return "成功";
         }
     }
+
+
+
+
 
 
 
