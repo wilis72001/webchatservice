@@ -28,7 +28,7 @@ import java.util.concurrent.CompletableFuture;
 @RestController
 @CrossOrigin
 public class ChatControllerDatabase {
-    final String serverNumber = "58637";
+    final String serverNumber = "56778";
     private JdbcTemplate jdbcTemplate;
     public ChatControllerDatabase(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
@@ -57,6 +57,32 @@ public class ChatControllerDatabase {
         return "发送成功";
     }
 
+    //发送图片
+    @CrossOrigin(origins = "http://localhost:" + serverNumber)
+    @PostMapping("/upLoadChatImage")
+    public String upLoadChatImage(@RequestBody Map<String, String> requestBody) {
+
+        String sender_account =  requestBody.get("sender");
+        String receiver_account =   requestBody.get("receiver");
+        String imgVideo =    requestBody.get("img_video");
+        byte[] imgVideoBytes = Base64.getDecoder().decode(imgVideo);
+
+        String sent_time =    requestBody.get("sent_time");
+        //    System.out.println(sender_account+"---"+receiver_account+"---"+message+"---"+sent_time);
+
+        try {
+            String sql = "INSERT INTO chat_records (sender_account, receiver_account,sent_time,img_video) VALUES (?,?,?,?)";
+            jdbcTemplate.update(sql, sender_account,receiver_account,sent_time,imgVideoBytes);
+            // 可能会抛出异常的代码
+        } catch (Exception e) {
+            // 处理 ExceptionType1 类型的异常
+            System.out.println(e);
+        }
+        return "发送成功";
+    }
+
+
+
     //获取历史记录
     @CrossOrigin(origins = "http://localhost:" + serverNumber)
     @PostMapping("/getMessageISent")
@@ -76,7 +102,6 @@ public class ChatControllerDatabase {
         } catch (Exception e) {
             System.out.println(e);
         }
-
         return Collections.emptyList(); // Return an empty list in case of error
     }
 
