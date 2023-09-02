@@ -1,34 +1,20 @@
 package Controller;
 
-import com.google.auth.oauth2.GoogleCredentials;
-import com.google.firebase.FirebaseApp;
-import com.google.firebase.FirebaseOptions;
-import com.google.firebase.database.*;
-import com.google.firebase.messaging.FirebaseMessaging;
-import com.google.firebase.messaging.Message;
-import com.google.firebase.messaging.Notification;
+
 import org.springframework.context.annotation.Configuration;
-import org.springframework.core.io.ClassPathResource;
-import org.springframework.http.MediaType;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.util.MultiValueMap;
+import org.springframework.util.Base64Utils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
-
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.time.Instant;
-import java.time.LocalDateTime;
-import java.time.ZoneId;
 import java.util.*;
-import java.util.concurrent.CompletableFuture;
+
 
 //notice
 @RestController
 @CrossOrigin
 public class ChatControllerDatabase {
-    final String serverNumber = "56778";
+    final String serverNumber = "53335";
     private JdbcTemplate jdbcTemplate;
     public ChatControllerDatabase(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
@@ -60,17 +46,21 @@ public class ChatControllerDatabase {
     //发送图片
     @CrossOrigin(origins = "http://localhost:" + serverNumber)
     @PostMapping("/upLoadChatImage")
-    public String upLoadChatImage(@RequestBody Map<String, String> requestBody) {
+    public String upLoadChatImage(@RequestBody Map<String, Object> requestBody) {
 
-        String sender_account =  requestBody.get("sender");
-        String receiver_account =   requestBody.get("receiver");
-        String imgVideo =    requestBody.get("img_video");
-        byte[] imgVideoBytes = Base64.getDecoder().decode(imgVideo);
+        String sender_account =  (String) requestBody.get("sender");
+        String receiver_account =   (String) requestBody.get("receiver");
+        int sent_time = (Integer) requestBody.get("sent_time");
 
-        String sent_time =    requestBody.get("sent_time");
+        String imgVideoBase64 = (String) requestBody.get("img_video"); // 接收Base64编码的字符串
+
+
         //    System.out.println(sender_account+"---"+receiver_account+"---"+message+"---"+sent_time);
 
         try {
+            // 将Base64编码的字符串解码为字节数组
+            byte[] imgVideoBytes = Base64.getDecoder().decode(imgVideoBase64);
+
             String sql = "INSERT INTO chat_records (sender_account, receiver_account,sent_time,img_video) VALUES (?,?,?,?)";
             jdbcTemplate.update(sql, sender_account,receiver_account,sent_time,imgVideoBytes);
             // 可能会抛出异常的代码
@@ -83,7 +73,7 @@ public class ChatControllerDatabase {
 
 
 
-    //获取历史记录
+    //获取我发送的消息
     @CrossOrigin(origins = "http://localhost:" + serverNumber)
     @PostMapping("/getMessageISent")
     public List<Map<String, Object>> getMessageISent(@RequestBody Map<String, String> requestBody) {
@@ -104,6 +94,29 @@ public class ChatControllerDatabase {
         }
         return Collections.emptyList(); // Return an empty list in case of error
     }
+
+    //获取我发送的图片
+    @CrossOrigin(origins = "http://localhost:" + serverNumber)
+    @PostMapping("/getPictureISent")
+    public List<Map<String, Object>> getPictureISent(@RequestBody Map<String, String> requestBody) {
+        String sender_account = requestBody.get("sender");
+        String receiver_account = requestBody.get("receiver");
+        //  System.out.println(sender_account + "---" + receiver_account);
+        try {
+            String sql = "SELECT sender_account,receiver_account,img_video,sent_time FROM chat_records WHERE sender_account = ? AND receiver_account = ?";
+            List<Map<String, Object>> chatHistory = jdbcTemplate.queryForList(sql, sender_account, receiver_account);
+            chatHistory.forEach(data -> {
+                data.forEach((key, value) -> {
+                    //     System.out.println(key + ": " + value);
+                });
+            });
+            return chatHistory;
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        return Collections.emptyList(); // Return an empty list in case of error
+    }
+
 
     //获取发送给我的消息
     @CrossOrigin(origins = "http://localhost:" + serverNumber)
@@ -128,6 +141,31 @@ public class ChatControllerDatabase {
         return Collections.emptyList(); // Return an empty list in case of error
     }
 
+
+    //获取发送给我的消息
+    @CrossOrigin(origins = "http://localhost:" + serverNumber)
+    @PostMapping("/getPictureSentToMe")
+    public List<Map<String, Object>> getPictureSentToMe(@RequestBody Map<String, String> requestBody) {
+        String sender_account = requestBody.get("sender");
+        String receiver_account = requestBody.get("receiver");
+
+        try {
+            String sql = "SELECT sender_account, receiver_account, img_video, sent_time FROM chat_records WHERE sender_account = ? AND receiver_account = ?";
+            List<Map<String, Object>> pictureSentToMe = jdbcTemplate.queryForList(sql, sender_account, receiver_account);
+
+            pictureSentToMe.forEach(data -> {
+                data.forEach((key, value) -> {
+                    //     System.out.println(key + ": " + value);
+                });
+            });
+
+            return pictureSentToMe;
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+
+        return Collections.emptyList(); // Return an empty list in case of error
+    }
 
 
 
