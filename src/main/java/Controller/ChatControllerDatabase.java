@@ -13,7 +13,7 @@ import java.util.*;
 @RestController
 @CrossOrigin
 public class ChatControllerDatabase {
-    final String serverNumber = "61251";
+    final String serverNumber = "53703";
     private JdbcTemplate jdbcTemplate;
     public ChatControllerDatabase(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;

@@ -23,7 +23,7 @@ import java.util.*;
 
 @Controller
 public class webchatRegisterController {
-    final String serverNumber = "61251";
+    final String serverNumber = "53703";
     // 将字节数组转换为十六进制字符串
     private String bytesToHexString(byte[] bytes) {
         StringBuilder sb = new StringBuilder();

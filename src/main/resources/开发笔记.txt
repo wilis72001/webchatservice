@@ -1,0 +1,359 @@
+https://cloud.google.com/
+
+vinciak001@gmail.com
+renoir82002@gmail.com
+
+
+
+https://www.netlify.com/
+
+账号和密码
+wilis72001@gmail.com vinciak001@gmail.com
+4706anZGF!
+
+
+配置flutter sdk  在 file -setting language/framework 选择flutter sdk 配置路径
+
+
+ int usernameFrom = convertToInt(requestBody.get("username_from"));
+        int usernameTo = convertToInt(requestBody.get("username_to"));
+        String usernameEnd = convertToString(requestBody.get("username_end"));
+        int numThreads = convertToInt(requestBody.get("numThreads"));
+
+
+下载tomacat native 1 ，idea 配置project structure -->add libary-->添加目录 选择native 文件类型
+
+GIT HUB 账号和密码
+wilis72001@gmail.com  4706anZGF
+Git version is 2.37.1
+
+ubuntu
+系统名：vinci
+用户名：vinci
+密码：123456
+cent os
+系统名：vinci
+用户名：vinci
+密码：123456
+
+
+本机ip地址
+192.168.19.101
+
+centos ip 地址
+ inet 192.168.202.135
+192.168.122.1
+
+inet 
+192.168.122.1
+
+192.168.202.1
+
+
+jenkins 地址
+http://192.168.202.135:8080/ 
+
+
+jenkins 管理员密码
+e55240960e4845d2a533a2cccfa7b66b
+
+
+管理员：
+admin
+1234Qwer
+全名：
+vinci admin
+
+电子邮件地址：
+vinciak001@gmail.com
+
+
+
+解压文件
+tar -xf apache-maven-<version>.tar.gz
+显示所有文件
+ls -a
+
+
+查看数据库
+show databases
+创建数据库
+create database test01；
+
+启动mysql
+net start mysql
+查看版本
+mysql --version
+来登录数据库
+mysql -u root -p
+
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '123456';
+
+
+运行以下命令来查看当前的访问限制：
+
+sql
+已复制！
+
+数据库操作 
+
+查询
+
+
+
+SELECT user, host FROM mysql.user;
+
+SELECT * FROM blc_user WHERE account_add = 'qCEbe2GckeHl0YZvjUPm';
+
+修改
+
+
+ALTER TABLE blc_user MODIFY icon_image LONGBLOB;
+
+ALTER TABLE blc_user
+ADD COLUMN password VARCHAR(255);
+
+ALTER TABLE blc_user MODIFY COLUMN password CHAR(64);
+
+ALTER TABLE blc_user ADD COLUMN password VARCHAR(255);
+
+UPDATE blc_user SET status= 1 WHERE account_add =?;
+
+ALTER TABLE chat_records ADD COLUMN img_video LONGBLOB;
+
+
+DELETE FROM  blc_user;
+
+ALTER TABLE chat_records MODIFY COLUMN id INT AUTO_INCREMENT;
+
+ALTER TABLE chat_records MODIFY sent_time INT;
+
+
+ALTER TABLE blc_user
+ADD COLUMN status TINYINT;
+
+SHOW GRANTS FOR 'root'@'DESKTOP-MO343N5';
+
+启动和停止数据库
+net stop mysql
+net start mysql
+
+其中，'username'是你的MySQL用户名，'hostname'是连接MySQL的主机名或IP地址。如果需要修改授权，可以使用GRANT语句为用户授予适当的权限，例如：
+
+
+GRANT ALL PRIVILEGES ON database_name.* TO 'username'@'hostname';
+注意替换'database_name'为实际的数据库名称。
+
+
+CREATE USER 'username'@'%' IDENTIFIED BY 'password';
+
+UPDATE blc_user
+SET name = 'John Doe', age = 25
+WHERE age > 30;
+
+
+
+CREATE TABLE my_friend(
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  my_account VARCHAR(100) NOT NULL,
+  friend_account VARCHAR(100) NOT NULL,
+  add_time TIMESTAMP
+);
+
+ALTER TABLE my_friend MODIFY COLUMN my_account VARCHAR(255) NOT NULL ;
+
+ALTER TABLE my_friend MODIFY COLUMN friend_account VARCHAR(255) NOT NULL ;
+
+
+CREATE TABLE chat_records (
+  id INTEGER PRIMARY KEY,
+  sender_account VARCHAR(255) NOT NULL,
+  receiver_account VARCHAR(255) NOT NULL,
+  message TEXT,
+  sent_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+
+
+
+#test
+server.port=8080
+spring.datasource.url=jdbc:mysql://localhost:3306/testapi
+spring.datasource.username=root
+spring.datasource.password=123456
+spring.jpa.show-sql=true
+spring.jpa.hibernate.ddl-auto=update
+
+
+以太网适配器 以太网:
+
+   连接特定的 DNS 后缀 . . . . . . . :
+   本地链接 IPv6 地址. . . . . . . . : fe80::817b:41ce:eff3:487a%10
+   IPv4 地址 . . . . . . . . . . . . : 192.168.19.101
+   子网掩码  . . . . . . . . . . . . : 255.255.255.0
+   默认网关. . . . . . . . . . . . . : 192.168.19.1
+
+以太网适配器 VMware Network Adapter VMnet8:
+
+   连接特定的 DNS 后缀 . . . . . . . :
+   本地链接 IPv6 地址. . . . . . . . : fe80::3142:3620:7ce9:e1f%20
+   IPv4 地址 . . . . . . . . . . . . : 192.168.202.1
+   子网掩码  . . . . . . . . . . . . : 255.255.255.0
+   默认网关. . . . . . . . . . . . . :
+
+
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN 
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: eno16777736: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP qlen 1000
+    link/ether 00:0c:29:f6:7f:f1 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.202.135/24 brd 192.168.202.255 scope global dynamic eno16777736
+       valid_lft 1505sec preferred_lft 1505sec
+    inet6 fe80::20c:29ff:fef6:7ff1/64 scope link 
+       valid_lft forever preferred_lft forever
+
+
+
+
+
+
+
+以下是一些常用的Maven命令，可以在命令行或终端中使用：
+
+mvn clean：清理项目，删除生成的目标文件和临时文件。
+
+mvn compile：编译项目的源代码。
+
+mvn test：运行项目的单元测试。
+
+mvn package：将项目打包成可分发的格式（如JAR或WAR）。
+
+mvn install：将项目构建结果安装到本地Maven仓库中，以便在其他项目中使用。
+
+mvn dependency:tree：显示项目的依赖关系树，包括直接和间接依赖项。
+
+mvn clean install：组合执行clean和install命令，先清理项目再进行安装。
+
+mvn clean package：组合执行clean和package命令，先清理项目再进行打包。
+
+mvn clean test：组合执行clean和test命令，先清理项目再运行单元测试。
+
+mvn clean compile：组合执行clean和compile命令，先清理项目再进行编译。
+
+
+1v03@qq.com  -10000v03@qq.com 
+注册时间：2023-07-04 08:20:29 1v03@qq.com
+注册时间：2023-07-04 08:54:11    2026秒
+
+
+
+1v04@qq.com --10000v04@qq.com 
+注册时间：2023-07-04 09:14:11
+注册时间：2023-07-04 09:31:05
+
+生产测试账号
+
+1v05@qq.com
+1v06@qq.com 2v06@qq.com  -30000v06@qq.com
+
+1-10000v07@qq.com
+
+
+
+用户名是：5003vtest@qq.com 响应时间:11748 reqTid:1688809221816_7c9462b5-7f   2023-7-8 17:40:21
+
+用户名是：14500vtest@qq.com 响应时间:11189 reqTid:1688809620138_4b13adfa-75 2023-7-8 17:47:0
+用户名是：14838vtest@qq.com 响应时间:5270 reqTid:1688809650466_e6221ec4-35 2023-7-8 17:47:30
+
+{"header":{"platformId":8002,"apiName":"/lottery-login-api/user/register","callTime":1685926713320,"token":"","sign":"1111","clientType":4,"clientVersion":null,"apiVersion":"23011301","gzipEnabled":0,"languageCode":"en","deviceCode":"71a187509a2c8ced575f42a8a959b41bcd816dc"},"body":{"code":1,"message":"The operation was successful","data":{"receiveAmount":null}}}
+
+
+
+
+
+
+
+
+
+安卓sdk目录
+C:\Users\Administrator\AppData\Local\Android\Sdk
+
+Android Studio目录
+D:\Program Files\Android\Android Studio
+
+flutter 目录
+D:\vinci_pjt\webchat\flutter_windows_3.10.6-stable\flutter
+
+
+
+
+
+
+OAuth 客户端已创建
+
+客户端 ID
+856737532541-u3eg9tm9kl7ut3bhrr30n5b57qqv6gg1.apps.googleusercontent.com
+
+客户端密钥
+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
+
+renoir82001@163.com
+4706anZGF
+授权码
+CGQTXQXFFZWGPBJD
+
+
+vinciak001@tom.com
+4706anZGF
+
+新系统
+root
+crvB3pDx67E9VXp7yIx2
+
+
+
+
+  //加载发送给我的消息和图片
+  Future<void> _getMessageSentToMe() async {
+    List<ChatMessage>? textMessages = await cp.getMessageSentToMe(
+        widget.chatUserAccount,
+        AccountUtil.getLoginAccount()
+    );
+    List<ChatMessage>? pictureMessages = await cp.getPictureSentToMe(
+        widget.chatUserAccount,
+        AccountUtil.getLoginAccount()
+    );
+
+    if (textMessages != null && textMessages.isNotEmpty) {
+      // 过滤时间戳大于上一条消息时间戳的文本消息
+      List<ChatMessage> newTextMessages = textMessages.where((message) {
+        return message.sent_time > lastMessageTimestamp;
+      }).toList();
+      if (newTextMessages.isNotEmpty) {
+        setState(() {
+          _messages.addAll(newTextMessages);
+          // 更新上一条消息时间戳
+          lastMessageTimestamp = newTextMessages.last.sent_time;
+        });
+      }
+    }
+
+    if (pictureMessages != null && pictureMessages.isNotEmpty) {
+      // 过滤时间戳大于上一条消息时间戳的图片消息
+      List<ChatMessage> newPictureMessages = pictureMessages.where((message) {
+        return message.sent_time > lastMessageTimestamp;
+      }).toList();
+      if (newPictureMessages.isNotEmpty) {
+        setState(() {
+          _messages.addAll(newPictureMessages);
+          // 更新上一条消息时间戳
+          lastMessageTimestamp = newPictureMessages.last.sent_time;
+        });
+      }
+    }
+//    _mergeAndSortMessages();
+  }

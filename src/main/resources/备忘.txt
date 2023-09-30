@@ -1,0 +1,940 @@
+rtx:
+vinci
+8888
+
+
+renoir82001@gmail.com
+4706anRA
+
+renoir82002@gmail.com
+4706anRA
+
+亚马逊云
+renoir82001@gmail.com
+4706anZGF
+
+
+币安平台
+renoir82001@gmail.com
+BVDmDu;v+2-$%5;
+
+
+svn
+vinci
+4706anRA!
+
+
+预生产h5地址: U发国际
+https://preh5-06.one2.cc/
+vinci001  1234qwer@
+
+
+
+http://13.212.176.160:8991/#/home 商户后台 vinci  123456 
+
+http://54.169.187.89:8992/#/home   总后台 vinci006   123456
+
+http://54.251.230.134:8080/  管理后台   admin 123456  
+
+
+192.168.19.101
+
+expressVPN
+vinci6666 密码  123456
+密钥
+6XVLAGI2GO7C6API
+
+AMDPAY/C2C后台
+
+https://prec2ch5.one2.cc/#/?t=6b67ce2f
+这个是C2C H5
+
+
+
+http://192.168.2.200:8081/c2cv3
+
+新项目的C2C 三期  这次你就跟着熟悉一下区块链这块的
+
+
+新禅道
+http://54.251.43.81:1680/user-login-L2V4ZWN1dGlvbi1idWctOS5odG1s.html
+账号：vinci   密码：ak168168!
+
+http://18.136.115.108 老禅道
+账号：vinci   密码：ak168168!
+
+ C2C的项目  和漫步的项目  这两个
+https://prec2ch5.one2.cc/#/?t=6b67ce2f
+这个是C2C H5
+
+http://192.168.2.200:8081/c2cv3/#id=uo2u9b&p=%E7%89%88%E6%9C%AC%E8%AF%B4%E6%98%8E&g=1
+
+http://13.214.165.145:8181/docs/amd_pay/amd_pay-1dn1ahf0ft8mr  接口文档
+文档管理平台
+vinci 123456
+
+http://18.136.115.108/story-view-603.html  C2C 2期需求
+
+http://13.229.154.107:8099/#/login
+superAdmin
+123456
+
+
+
+
+
+邮箱：
+renoir82002@gmail.com
+4706anRA
+
+
+邮件
+https://sixthnet.awsapps.com/mail 
+用户 vinci
+密码 4706anRA!
+
+
+http://18.142.151.126:8090/
+Confluence 地址
+
+账号：vinci
+密码：vinci168!
+
+
+
+
+http://192.168.2.32:8383/index.html
+日报系统用户名vinci  123456
+
+
+
+
+infura
+https://mainnet.infura.io/v3/7d08f7577aa144e7be06112ce70006e3
+
+wss://mainnet.infura.io/ws/v3/7d08f7577aa144e7be06112ce70006e3
+
+linux
+vinci
+1234qwer
+
+
+
+
+
+
+
+ jumpserver:
+oa / oa123456
+发布系统
+oa / oa123456
+ 发布系统
+http://192.168.2.77:8888/
+vinci / 123456
+
+
+
+
+
+
+以下是新测试环境的地址以及用户， 首次登录请及时修改密码
+
+
+新测试环境 ?发布系统
+http://35.72.239.240:8888 ?
+
+jumpserver
+35.79.68.243
+
+graylog
+3.115.50.29:9000
+
+
+发布系统用户
+petter / 123456
+bob / 123456
+vinci / 123456
+
+Jumpserver
+petter / 123456
+bob / 123456
+
+
+新测试nacos地址:
+35.79.46.33:8848/nacos
+nacos
+nacos
+
+开发部署系统
+192.168.2.161:8888
+
+vinci 123qwe
+
+
+
+
+U8
+商户后台 18.143.63.70:8991 admin@u8/123456
+  总后台 18.143.63.70:8992 admin/456000
+
+
+xp 系统
+admin
+1234qwe
+
+Bet123
+商户后台
+http://18.143.63.70:8991/#/login
+管理员：admin@u8，密码123456
+vinci@u8，密码123456
+总后台
+http://18.143.63.70:8992/#/login
+管理员：  admin / 456000
+
+预生产 U8
+54.179.119.160/gameCategory?name=电子游艺&type=4
+
+http://18.143.63.70:8991/#/login
+http://18.143.63.70:8992/#/dashboard/businessManage
+
+
+http://cd.one2.cc/user-login-L3N0b3J5LXZpZXctMTE1Lmh0bWw=.html
+账号：vinci
+密码：vinci123!
+
+
+QuickFox
+9087882001
+Aa123123
+
+U8二期的需求产品原型
+ 外网地址：https://7d516l.axshare.com
+内网地址：http://192.168.2.200:8081/U8-V1.1/
+
+
+新哈希
+开发测试环境 H5 /PC
+http://192.168.2.11/#/
+
+商户后台
+http://192.168.2.12:8991
+
+192.168.33.51:4001  H5     192.168.33.51:4002 pc
+
+U8二期的需求产品原型
+ 外网地址：https://7d516l.axshare.com
+内网地址：http://192.168.2.200:8081/U8-V1.1/
+
+
+C2C 需求
+http://192.168.2.200:8081/HITO/Product/C2C5.0
+
+bet123 新增域名：
+bet123e.com
+bet123f.com
+bet123g.com
+bet123h.com
+bet123i.com
+bet123j.com
+bet123k.com
+bet123l.com
+bet123n.com
+bet123o.com
+
+
+u8发布平台
+http://18.139.140.37/
+oa    123456
+
+
+
+
+u8预生产三个域名：bet123p.com bet123q.com bet123r.com,请知悉
+
+禅道
+http://cd.one2.cc/ 
+账号：vinci
+密码：vinci123!
+
+
+预生产六号 H5 PC
+https://preh5-06.one2.cc/#/?t=4ca9b4b8
+
+H5 http://192.168.33.55:4001/
+PC http://192.168.33.55:4002/
+
+
+
+
+预生产六号 商户后台
+http://54.169.187.89:8991/#/third/thirdPartyBackwaterRecord
+
+admin@006  456000
+vinci 123456
+
+
+预生产总后台地址:
+http://54.169.187.89:8992/
+vinci@admin
+123456
+
+admin
+456000
+
+
+生产
+https://tsrj.one2.cc/#/
+
+
+安卓预生产
+vinci06
+vinci06Qwer
+
+安卓生产
+vinci07
+vinci07Qwer
+
+
+
+
+
+http://192.168.2.11/   开发环境的H5，你把这个记一下，H5除了这里就是线上的，其他的环境之前已经销毁了
+
+
+sky手机密码
+150364
+
+
+
+ http://52.77.65.180:8080/view/lottery-prod/
+打包系统
+http://18.139.140.37/#/platform/list
+部署系统
+
+打包系统:
+server/123456
+部署系统:
+om/123456
+
+
+
+my github
+
+3260145932@qq.com
+4706anZGF
+
+
+Backoffice URL: https://admin.prerelease-env.biz/
+Login: akyl_admin
+Initial password: ASDFqwer1234
+
+
+
+
+
+
+预生产彩票打包
+1.先打ak core，找到邮件TAG 号 放入 prod_prodak-core
+
+
+
+graylog
+http://52.74.40.134:9000/search?q=%22%E6%89%A7%E8%A1%8C%E7%9B%91%E6%8E%A7%22&rangetype=relative&from=300
+
+
+日志系统   admin  admin
+
+
+预生产发布系统 vinci   vinci123
+
+创世红海  测试账号和密码
+1021753617   1021753617
+
+生产测试账号
+prvin01 1234Qwer
+
+vin001 1234Qwer   6号生产账号
+
+om
+fmPAe4U8VcpaVLBWswrj
+
+
+vinciak001@gmail.com
+
+快闪总后台
+http://3.0.69.114:8888/#/login
+hero50
+123456
+R2QAKYRPR7ZWHDW4
+
+
+安卓端偶数是加固包，奇数是普通包
+
+
+聊天室客服后台
+http://18.140.224.65:7882/#/login
+
+
+http://13.250.92.27/#/login
+admin@ffc   admin@ffc
+testffc01
+123456
+
+vinci  密码重置
+o4M8bOYIqpC3Ujk
+
+Chelsey
+3Re85Pn2cNSTYVm
+
+
+6 Bet123四期
+任务描述
+暂无
+研发需求描述
+本次需求主要优化首页展示、网站底部内容更新为后台配置、优化个人中心、新增BBIN电子和MG电子游戏；
+
+
+
+具体需求见产品方案：
+
+
+
+产品需求外网地址：https://rbzltr.axshare.com
+
+产品需求内网地址：http://192.168.2.200:8081/U8-V1.3/
+
+vinci001  1234Qwer
+
+
+二、公司Wifi密码统一修改，Wifi名称:Rirance10,密码：Ak888+666请大家相互转达。
+
+
+总后台：http://13.229.45.162:8992/#/
+admin 456000
+商户后台：http://13.229.45.162:8991/#/
+admin@jeffby 123456
+H5: https://54.255.226.111/
+
+必赢棋牌
+商户后台machant platform：
+http://13.229.45.162:8991/#/
+
+username：chelsey ，irene， mcqueen
+password：123456
+
+总后台supermachant platform：
+http://13.229.45.162:8992/#/
+
+username：chelsey@admin ，irene@admin， mcqueen@admin
+password：123456
+
+H5: https://54.255.226.111/
+
+biying graylog
+
+http://13.212.199.12:9000/search
+admin  admin
+
+
+
+imapp9Qv
+
+
+golink：
+classclass2060@gmail.com
+class123
+
+Golink     
+账号:13170566159  
+密码:888hj888
+
+
+
+
+AK
+09063269812
+
+09568658610
+
+09568658604
+
+
+apple id  vinck010@gmail.com   1234Qwerr
+
+
+
+https://webchat-80ebe-default-rtdb.firebaseio.com
+
+
+
+
+巴西站
+
+http://13.250.123.184:8081/#/home
+admin@rico77
+123456
+
+vinci@admin
+123456
+
+https://13.250.123.184/ 预生产H5 PC 
+http://13.250.123.184:8081
+snowb@admin	
+irene@admin
+chelseyb@admin	
+yukiob@admin
+
+pw:123456
+
+
+
+
+
+预生产 6号  下载站2: 54.169.187.89
+预生产 6号:  下载站 18.136.144.255
+
+
+
+vpn express
+EH8HVXJHJMWAYEYDCWBUYG5
+
+
+
+
+
+
+
+一期的游戏：PP电子，沙巴体育，AG真人，EBET真人，PG电子
+二期的游戏：Jili电子、 FC电子、EVO真人、KA电子，HB电子，RT电子
+
+globe 电话卡
+09063269812
+
+
+
+
+
+一号商户后台
+http://54.169.187.89:8991/#/admin/subaccount
+
+vincione01
+1234567
+
+
+11.00- 11.05 注册2000个用户  大约5分钟 1v01@qq.com---2000v01@qq.com
+
+11.17				2001v01@qq.com---7135v01@qq.com
+
+
+12:47 -----14:14发起 1v02@qq.com  5002v02@qq.com
+
+
+14：22 14:30结束-----5002v02@qq.com  ----10000v02@qq.com
+
+wilis72001@gmail.com 邮箱和密码
+
+4706anZGF
+
+
+GIT HUB 账号和密码
+wilis72001@gmail.com  4706anZGF
+
+
+1c01@qq.com----20000c01@qq.com
+
+ 15:02 15:16 15:26 完成 
+
+4:20开始
+16:20   10000笔 16:46 17：15完成  20894  14333
+y02@qq.com 7069 of 10000  29.31% 26分钟
+c02@qq.com 6786 of 10000  32.14% 55分钟
+12563 14333   错误 150/ 1770  8.4% 
+
+
+
+大规模登录的时候 报密码错误
+
+每秒并发5笔，1000v03@qq.com 1499v03@qq.com
+
+1686827554545_3a94e65f-0d
+1686827554948_4c9965c3-ea
+1686827554746_537b28a7-98
+1686827554948_4c9965c3-ea
+1686827555149_668864b8-8b
+
+2023-06-21 15:00:00
+
+15:07  15 27
+
+@vinci  你登录超管账号，给需要用到的测试开一下账号，
+商户后台：http://13.214.19.149:8991/#/home
+admin@akDev / 123456
+
+彩票开发商户后台
+13.214.19.149:8991
+
+
+https://www.phlboss.com/
+
+renoir82001@gmail.com
+
+1234Qwer
+
+
+
+巴西盘服务器指标
+地址: https://gbrazil.one2.cc:3001
+用户名: admin
+密码: cTgTXkUH1BnMB2Ua
+
+
+
+
+云平台测试
+https://mtc.baidu.com/tinypace/main#/
+bewintest0001
+1234Qwer
+13267072339f
+
+ok站 总后台
+admin 456000
+vinci 123456
+http://13.212.234.247:8992/
+
+
+
+商户后台
+vinci@admin  123456
+http://13.212.234.247:8991/#/login
+admin@rico77
+123456
+
+
+
+@vinci OK盘地址
+总后台：13.212.234.247:8992
+admin 456000
+商户后台：13.212.234.247:8991
+admin@ok 123456
+vinciok	123456
+
+
+依次是邀请活动页面/转盘/VIP页面/extra bonus/定位到首页电子游戏栏
+
+https://www.flyvpn.com/     下载客户端
+
+账号：winston@sixthnet.com
+密码：Abc456!!!
+
+
+bombaywin.com 这个域名 @Banna @vinci OK站最终上线后，用这个域名
+
+
+BOMBAYWIN    BOMBAYWIN.COM
+
+
+evo 后台
+Website URL: https://clientarea.evolution.com/ 
+Email: evokamasia@gmail.com
+Password: evoca2022
+
+
+
+测试部
+
+本周工作内容：
+
+1、彩票需求上线	100%
+2、巴西站5期测试	50%
+3、ok站整体测试	35%
+     已提交：50个bug，42个bug 还是激活状态，需要抓紧修复；
+	未转测：三方登录、小游戏、充值、提现；
+	未转测的用例量比较大，都是重要模块，请加紧开发；
+
+下周工作计划：
+1、巴西站线上测试
+2、ok站测试
+
+
+
+
+
+巴西站预生产域名：https://rico77.one2.cc/
+巴西站生产域名：http://br2bet.com/
+
+
+
+17：34 开始  970v22@qq.com   1000000v22@qq.com
+
+
+
+
+7月24日日报
+部门：测试部
+
+人员：vinci
+工作内容
+1、ok站商户后台测试，bug确认及分配；
+2、推广域名功能梳理   100%
+
+
+人员：casso
+工作内容：
+1.巴西五期需求线上环境测试 100%
+2.ok站后台测试 40%
+
+
+人员：Irene
+工作内容：
+测试OK站商户后台45%
+提交bug：
+4227/4226/4225/4223
+4220/4218/4217
+回归bug:
+4201/4203/4205/4189
+
+
+测试部
+
+本周工作内容：
+
+1、ok站整体测试	45%
+     27个bug 还是激活状态，需要抓紧修复；
+	未转测：小游戏
+2、巴西站线上问题处理。
+
+下周工作计划：
+1、ok站整体测试，充值、提现用真钱测试
+2、对接游戏测试
+
+
+7月28日日报
+部门：测试部
+
+人员：vinci
+工作内容
+1、ok站商户后台测试，公告与站内信测试，以及其他bug确认及分配
+2、第二家挖矿游戏测试，bug 确定 及提交  
+3、ok站 充值冒烟测试 
+
+Casso-今日工作：
+1）总后台测试 65%
+2）电子游戏三方对比测试40%，持续跟进
+3）VIP活动前台测试 50%
+4）前台推荐页 40%
+
+irene-今日工作：
+1总后台测试 50%
+2商户后台测试65%
+3 回归Bug
+
+
+
+8月16日日报
+部门：测试部
+
+vinci-今日工作：
+1、ok站功能测试完毕；
+     线上测试bug 处理；
+2、ok站优化测试需求 测试
+3、OK站其他bug 确认分配；
+
+Casso-今日工作：
+1.小游戏测试，提单跟进
+2.APP马甲包协助验证
+3.彩票C2C问题协助确认
+
+irene-今日工作：
+1测试h5页面90%
+2编写OK站优化需求用例100%
+3 回归bug
+
+
+
+
+vinci020.00
+--
+----
+ vinci02 111.00
+ICICI Bank
+21212121212
+ICICI Bank 21212121212   vinci02  111.00
+
+
+
+
+
+
+OK站生产环境监控:
+	username: qa2023
+	password: J1aI644zoXxffcFZmZg9Do6W
+	address: https://grafana.one2.cc:3000/
+
+
+测试部：
+
+本周工作内容：
+1、OK盘一期H5 PC 商户后台功能测试，压力测试 整体进度93%，仍然有较多bug ；
+2、轮盘活动测试  50%；
+3、每日任务活动测试  80%；
+4、流水打码相关测试（线上问题）； 
+5、小游戏测试100%；
+6、三方充值提现测试；
+
+下周工作计划：
+1、ok站 线上测试，线上问题处理
+
+注册账号
+1v13@qq.com   500000v13@qq.com
+
+
+1-10000    v1401@qq.com
+
+
+
+
+flash1usdt@gmail.com
+
+1234Qwer
+
+第一笔提现
+TX90002308150000040430
+
+TX90002308150000078775
+
+TX90002308150000076070
+
+
+生产pc 以下游戏会无法滚动屏幕：
+
+Egypt Gods
+animal quest
+fruit burst
+jelly boom
+basketball
+red cliff
+battle tanks
+epic gladiators
+ace round
+Fruits land
+Reign of Dragons
+The great conflict
+ET lost socks
+
+
+1s3.akones.com
+
+
+
+
+9月29日 日报
+部门：测试部
+
+vinci-今日工作：
+1、PG 游戏bug分析确认 100%；
+2、周末排班；
+
+Casso-今日工作：
+1.彩票-【6号】9月优化需求-聊天室问题跟进测试，100%
+2.OK站-PG电子测试，90%
+
+
+irene-今日工作：
+1、小游戏bug回归100%
+2、测试ok站PG电子80%
+
+logen-今日任务：
+1.6号9月优化需求生产环境测试100%；
+2.JDB电子需求测试20%
+
+
+Snow 
+Tasks: 09/29/23
+1.Deployed the following TAGS:
+RLS_20230929T0857_2305100
+RLS_20230929T0958_2305100
+TEST_OK_20230929_01
+TEST_OK_20230929_02
+RLS_20230929T1558_23071401 
+2. OKBET PG electronic game testing - 80%
+
+
+
+测试部：
+
+本周工作内容：
+1、ok 盘 注册登录优化上线； 100%
+2、彩票 9月优化需求 上线100%；
+2、彩票线上问题回复处理  100%
+3、小游戏bug 修复验证 100%；
+
+
+下周工作计划：
+1、PG电子测试；
+2、JDB 沙巴体育 三方游戏测试；
+3、其他需求测试；
+
+
+
+  String base64Image = data['icon_image'] ?? '';
+        Uint8List decodedImage = base64Decode(base64Image);
+
+       
+
+vinci@sixthnet.com
+crvB3pDx67E9VXp7yIx2
+
+smtp.mail.us-east-1.awsapps.com
+465
+
+
+
+
+vinci-今日任务：
+1.安卓259包 生产 和测试重现  100%；
+2.ok站三期样式 bug协助确认 ；
+3.埋点需求了解  10%
+
+
+
+
+1.flutter 聊天工具项目
+2.telegram项目设计 与编码
+3.测试管理工作
+4.自动化测试工作
+5.找房子
+
+
+
+项目：
+自动化，接口测试，性能测试
+1、彩票项目  ios 安卓 pc H5
+2、巴西站
+3、ok 站
+
+
+DILA TRIM  牛舌
+SIRLOIN 牛瘦肉 440
+BATOK 雪花
+RIBEYE 大块牛肉
+PISNGE LAMAN 搜肉
+BALAT 牛皮
+
+
+
+
+1、可提现额度等于有效投注金额+奖金派送+活动礼金；
+2、当期投注开奖后，平台系统会自动更新可提现额度；
+3、您每天只能进行8次提现，提现将会在发起后两小时内到账；
+4、休息时间为00:00—24:00，在这期间将无法发起提现；
+5、提现分为：支付宝提现,银行卡提现与微信提现；
+6、印度小马代付提现金额须为整数。
+
+
+
+
+
+
+
+
+

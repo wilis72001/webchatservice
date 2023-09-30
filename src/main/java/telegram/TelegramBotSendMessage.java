@@ -8,11 +8,11 @@ import java.nio.charset.StandardCharsets;
 public class TelegramBotSendMessage {
     public static void main(String[] args) {
         // 机器人API令牌
-        String botToken = "5817537605:AAEtuUTVyddCQIraDWtCoDXHkeaitj_2H44";
-        // 目标聊天ID（可以是用户ID或群组ID）
-        String chatId = "-1001956257821";
+        String botToken = "5817537605:AAG77T7_jpDJuJW2PvufqAMhcBTQ1YoLcb8";
+        // 目标聊天ID（可以是用户ID或群组ID） 频道
+        String chatId = "-1001919206308";
         // 要发送的消息
-        String message = "Hello, Telegram Bot!";
+        String message = "早上好";
 
         try {
             // 创建URL对象
